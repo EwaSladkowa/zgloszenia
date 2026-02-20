@@ -1,0 +1,4 @@
+1.SELECT personel.id,personel.imie,personel.nazwisko FROM `personel` WHERE personel.status = "policjant"; 
+2.SELECT typ, count(marka) liczbaPojazdow FROM `pojazdy` GROUP BY typ;
+3.SELECT id, nazwisko FROM personel WHERE id NOT IN (SELECT id_personel FROM rejestr);
+4.INSERT INTO `rejestr`(`data`, `id_personel`, `id_pojazd`) VALUES (CURRENT_DATE,'1','14');

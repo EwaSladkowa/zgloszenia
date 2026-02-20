@@ -1,0 +1,58 @@
+*{
+    font-family: Tahoma;
+    margin: 0px;
+}
+
+.blokGlowny{
+    display: flex;
+}
+
+header,footer{
+    background-color: Maroon;
+    color: white;
+    padding: 10px;
+}
+
+.SekcjaL,.SekcjaP{
+    width: 50%;
+    height: 500px;
+}
+
+.SekcjaL{
+    background-color: LightSalmon;
+}
+
+.SekcjaP{
+    background-color: DarkSalmon;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+table,td{
+    border: solid 1px Maroon;
+}
+
+table{
+    width: 85%;
+    border-collapse: collapse;
+}
+
+ol{
+    list-style: none;
+}
+
+button{
+    background-color: Maroon;
+    color: white;
+    margin-left: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: maroon;
+}

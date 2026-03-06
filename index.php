@@ -37,7 +37,7 @@
       if (isset($_POST["Radio"])) {
         $connection = mysqli_connect(hostname: $servername, username: $username, password: $password = "", database: $dbname);
         $opcja = $_POST['Radio'];
-        echo "Wybrano opcję: ", $opcja;
+        echo "<h3>","Wybrano opcję: ", $opcja,"</h3>";
         mysqli_close($connection);
       }
       ?>

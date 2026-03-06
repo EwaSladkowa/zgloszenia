@@ -35,10 +35,10 @@
       </form>
       <?php
       if (isset($_POST["Radio"])) {
-      $connection = mysqli_connect(hostname: $servername, username: $username, password: $password = "", database: $dbname);
-      $opcja = $_POST['Radio'];
-      echo "Wybrano opcję: ", $opcja;
-      mysqli_close($connection);
+        $connection = mysqli_connect(hostname: $servername, username: $username, password: $password = "", database: $dbname);
+        $opcja = $_POST['Radio'];
+        echo "Wybrano opcję: ", $opcja;
+        mysqli_close($connection);
       }
       ?>
       <table>
@@ -51,12 +51,12 @@
         if (isset($_POST["Radio"])) {
           $connection = mysqli_connect(hostname: $servername, username: $username, password: $password = "", database: $dbname);
           $query2 = "SELECT id,imie,nazwisko FROM `personel` WHERE status = '{$opcja}'";
-          $result2 = mysqli_query($connection, $query2); 
+          $result2 = mysqli_query($connection, $query2);
 
           while ($a = mysqli_fetch_array($result2)) {
             echo "<tr>",
               "<td>",
-                $a['id'],
+              $a['id'],
               "</td>",
               "<td>",
               $a['imie'],
@@ -83,7 +83,6 @@
         while ($row = mysqli_fetch_array($result)) {
           echo "<li>", $row['id'], '.', $row['nazwisko'], "</li>";
         }
-        ;
 
 
         mysqli_close($connection);
@@ -96,7 +95,7 @@
       </form>
       <?php
 
-      if ($_POST) {
+      if (isset($_POST['Wybierz'])) {
         $connection = mysqli_connect(hostname: $servername, username: $username, password: $password = "", database: $dbname);
         $id = $_POST['Wybierz'];
         $query1 = "INSERT INTO `rejestr`(`data`, `id_personel`, `id_pojazd`) VALUES (CURRENT_DATE,{$id},'14')";
